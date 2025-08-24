@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="de-DE">
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("header").load("/header_de.html");
+      });
+    </script>
+  </head>
+
+  <body>
+    <header></header>
+
+    <div id="title">Rocio &nbsp;&&nbsp; Valerius</div>
+
+    <div id="subtitle">Freitag, 7. November 2025</div>
+
+    <div id="countdown">
+      <script src="../js/countdown.js"></script>
+    </div>
+
+    <div id="nav"></div>
+
+    <article class="section">
+      <section>
+        <h2>Hochzeit</h2>
+        <p>Wir heiraten standesamtlich am 7. November 2025 in Potsdam.</p>
+      </section>
+    </article>
+
+    <article class="event">
+      <section>
+        <h2>
+          Event 1 - 23. November 2025, Hotel zum Ochsen, Schönwald, Deutschland
+        </h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10657.766354233225!2d8.197029678437094!3d48.10171665365745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4790e8261d1d2e0d%3A0x52c91b9840d52874!2sHotel%20zum%20Ochsen%20in%20Sch%C3%B6nwald%20im%20Schwarzwald!5e0!3m2!1sen!2sde!4v1756059141609!5m2!1sen!2sde"
+          width="75%"
+          height="400"
+          style="border: 0; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3)"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </section>
+    </article>
+
+    <article class="event">
+      <section>
+        <h2>Event 2 - 4. April 2026, El Convento,Ciudad de México, Mexico</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.5376952493884!2d-99.16135742508904!3d19.345857143446015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ffda49abe105%3A0x23ab6356ffd10725!2sEl%20Convento!5e0!3m2!1sen!2sde!4v1756059222693!5m2!1sen!2sde"
+          width="75%"
+          height="400"
+          style="border: 0; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3)"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </section>
+    </article>
+
+    <article class="section">
+      <section>
+        <h2>RSVP</h2>
+        <form id="rsvp">
+          <input
+            type="text"
+            name="name"
+            placeholder="Dein Name"
+            required
+          /><br />
+          <label for="event">Wähle ein Event:</label>
+          <select id="event" name="event">
+            <option value="231125">23. November 2025, Schönwald</option>
+            <option value="040426">4. April 2026, Mexiko-Stadt</option>
+          </select>
+          <br />
+          <label for="response">Teilnahme:</label>
+          <select id="response" name="response">
+            <option value="Ja">Ja</option>
+            <option value="Nein">Nein</option>
+          </select>
+          <br />
+          <input
+            type="number"
+            name="count"
+            placeholder="Anzahl Personen"
+            min="0"
+            max="4"
+          /><br />
+          <textarea
+            name="other"
+            rows="5"
+            cols="20"
+            placeholder="Möchtest Du uns sonst noch etwas mitteilen?"
+          >
+          </textarea>
+          <br />
+          <input
+            type="text"
+            name="invite_code"
+            placeholder="Einladungscode"
+            required
+          /><br />
+          <button type="submit">Absenden</button>
+        </form>
+
+        <p id="status"></p>
+
+        <script>
+          $("#rsvp").on("submit", function (e) {
+            e.preventDefault();
+            var data = $(this).serialize();
+
+            $("#status").text("Submitting...");
+
+            $.post(
+              "https://script.google.com/macros/s/AKfycbyRxN1Vx-_m1LIPYEzxsZAyWd772cc6xxNoOZg38vZYPe8zvQicJ4XeAQfdAXjO03SmSw/exec",
+              data,
+              null,
+              "json"
+            )
+              .done(function (res) {
+                if (res.result === "success") {
+                  $("#status").text("Thank you! Your RSVP has been recorded.");
+                  $("#rsvp")[0].reset();
+                } else {
+                  $("#status").text("Error: " + res.message);
+                }
+              })
+              .fail(function (err) {
+                console.error(err);
+                $("#status").text("Could not connect to server.");
+              });
+          });
+        </script>
+      </section>
+    </article>
+
+    <div id="footer"></div>
+  </body>
+</html>
