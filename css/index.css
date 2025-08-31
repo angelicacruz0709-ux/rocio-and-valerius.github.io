@@ -1,71 +1,124 @@
+/* Font */
+
+@font-face {
+  font-family: Caveat;
+  src: url("../font/Caveat-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: ClashDisplay;
+  src: url("../font/ClashDisplay-Light.ttf");
+}
+@font-face {
+  font-family: DancingScript;
+  src: url("../font/DancingScript-Variable.ttf");
+}
 @font-face {
   font-family: GreatVibes;
   src: url("../font/GreatVibes-Regular.ttf");
 }
+@font-face {
+  font-family: PlayfairDisplay;
+  src: url("../font/PlayfairDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: Stardom;
+  src: url("../font/Stardom-Regular.ttf");
+}
+
+/* Constant */
+
+:root {
+  /* --color-1: #006263; */
+  --color-1: #000000;
+  --color-2: #ffffff;
+  /* --color-2: #f6fffa; */
+  --color-white: #ffffff;
+  /* --shadow: rgba(0, 0, 0, 0.3); */
+  --shadow: rgb(1, 47, 6);
+}
+
+/* Header */
 
 header {
   background: url(../img/flowers.png) no-repeat;
-  background-color: #f6fffa;
+  background-color: var(--color-2);
   background-position: top;
   background-size: contain;
   height: 125px;
   width: 100%;
 }
 
-body {
-  font-family: "Verdana", serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  background-color: #f6fffa;
-}
-/* #006263 */
-#title {
-  font-family: "GreatVibes", "Verdana";
-  font-size: 35px;
-  color: #000000;
-  text-align: center;
-}
-#subtitle {
-  font-family: "GreatVibes", "Verdana";
-  font-size: 35px;
-  color: #000000;
-  text-align: center;
-}
-#countdown {
-  font-family: "GreatVibes", "Verdana";
-  font-size: 35px;
-  color: #006263;
-  text-align: center;
-}
-.event {
-  font-family: "GreatVibes", "Verdana";
-  font-size: 35px;
-  color: #006263;
-  text-align: center;
-}
+/* Navigation */
 
 .nav {
+  background: var(--color-white);
+  box-shadow: 0 2px 5px var(--shadow);
   display: flex;
-  justify-content: center;
   gap: 20px;
-  padding: 10px 0;
+  justify-content: center;
   margin: 15px 0 15px 0;
-  background: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
 }
 .nav a {
-  text-decoration: none;
-  color: #006263;
+  color: var(--color-1);
   font-size: 16px;
   font-weight: bold;
+  text-decoration: none;
 }
+
+/* Footer */
+
 #footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #006263;
-  color: #f6fffa;
-  position: fixed;
-  width: 100%;
+  background-color: var(--color-1);
   bottom: 0;
+  color: var(--color-2);
+  padding: 10px;
+  position: static;
+  width: 100%;
+}
+
+/* Body */
+
+/* html,
+body {
+  height: 100%;
+  margin: 0;
+} */
+body {
+  background-color: var(--color-2);
+  display: flex;
+  flex-direction: column;
+  font-family: "PlayfairDisplay", "Verdana", serif;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+  text-align: center;
+}
+main {
+  flex: 1;
+}
+
+/* Other */
+
+#title {
+  font-family: "GreatVibes", "Verdana", serif;
+  font-size: 40px;
+}
+#subtitle {
+  font-family: "GreatVibes", "Verdana", serif;
+  font-size: 25px;
+}
+#countdown {
+  font-family: "GreatVibes", "Verdana", serif;
+  font-size: 25px;
+  color: var(--color-1);
+}
+
+/* Section */
+
+.section {
+  /* font-family: "ClashDisplay", "Verdana", serif; */
+  /* font-size: 35px; */
+  color: var(--color-1);
+  /* text-align: center; */
 }
