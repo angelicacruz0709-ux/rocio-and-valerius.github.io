@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="de-DE">
+  <head>
+    <link rel="stylesheet" href="/css/rsvp.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("header").load("/header.html");
+      });
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header></header>
+
+    <div id="title">Rocio &nbsp;&&nbsp; Valerius</div>
+
+    <div id="subtitle">Freitag, 7. November 2025</div>
+
+    <div id="countdown">
+      <script src="../js/countdown.js"></script>
+    </div>
+
+    <div id="nav"></div>
+
+    <main>
+      <article class="section">
+        <section>
+          <h2>RSVP</h2>
+          <form id="rsvp">
+            <input
+              type="text"
+              name="name"
+              placeholder="Dein Name"
+              required
+            /><br />
+            <select id="event" name="event">
+              <option value="" disabled selected hidden>Wähle ein Event</option>
+              <option value="231125">23. November 2025, Schönwald</option>
+              <option value="040426">4. April 2026, Mexiko-Stadt</option>
+            </select>
+            <br />
+            <select id="response" name="response">
+              <option value="" disabled selected hidden>Teilnahme?</option>
+              <option value="Ja">Ja</option>
+              <option value="Nein">Nein</option>
+            </select>
+            <br />
+            <input
+              type="number"
+              name="count"
+              placeholder="Anzahl Personen"
+              min="0"
+              max="4"
+            /><br />
+            <textarea
+              name="other"
+              rows="5"
+              cols="20"
+              placeholder="Möchtest Du uns sonst noch etwas mitteilen?"
+            ></textarea>
+            <br />
+            <input
+              type="text"
+              name="invite_code"
+              placeholder="Einladungscode"
+              required
+            /><br />
+            <button type="submit">
+              <i class="fas fa-envelope"></i> Absenden
+            </button>
+          </form>
+
+          <p id="status"></p>
+
+          <script>
+            $("#rsvp").on("submit", function (e) {
+              e.preventDefault();
+              var data = $(this).serialize();
+
+              $("#status").text("Submitting...");
+
+              $.post(
+                "https://script.google.com/macros/s/AKfycbyRxN1Vx-_m1LIPYEzxsZAyWd772cc6xxNoOZg38vZYPe8zvQicJ4XeAQfdAXjO03SmSw/exec",
+                data,
+                null,
+                "json"
+              )
+                .done(function (res) {
+                  if (res.result === "success") {
+                    $("#status").text(
+                      "Thank you! Your RSVP has been recorded."
+                    );
+                    $("#rsvp")[0].reset();
+                  } else {
+                    $("#status").text("Error: " + res.message);
+                  }
+                })
+                .fail(function (err) {
+                  console.error(err);
+                  $("#status").text("Could not connect to server.");
+                });
+            });
+          </script>
+        </section>
+      </article>
+
+      <script>
+        const eventSelect = document.getElementById("event");
+
+        eventSelect.addEventListener("change", function () {
+          this.classList.add("selected");
+        });
+        const responseSelect = document.getElementById("response");
+
+        responseSelect.addEventListener("change", function () {
+          this.classList.add("selected");
+        });
+      </script>
+    </main>
+
+    <div id="footer"></div>
+  </body>
+</html>
