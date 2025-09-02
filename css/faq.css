@@ -10,7 +10,7 @@
   box-shadow: 0 2px 5px var(--shadow);
   margin-bottom: 0.75rem;
   padding: 0.75rem 1rem;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
   text-align: left;
 }
 .faq details[open] {
@@ -30,8 +30,12 @@
 .faq summary::after {
   color: var(--color-1);
   content: "▶";
+  display: inline-block;
   margin-left: auto;
-  transition: transform 0.3s ease;
+  text-align: center;
+  transform-origin: center;
+  transition: transform 0.5s ease;
+  width: 1em;
 }
 .faq details[open] summary::after {
   color: var(--color-white);
@@ -44,7 +48,7 @@
   /* opacity: 0; */
   overflow: hidden;
   text-align: left;
-  transition: max-height 0.5s ease, opacity 0.4s ease;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 /* .faq details[open] p {
   text-align: left;
