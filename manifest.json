@@ -25,7 +25,8 @@
       "purpose": "maskable"
     }
   ],
-  "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ffffff"
+  "theme_color": "#ffffff",
+  "start_url": "https://rocio-and-valerius.github.io/",
+  "display": "standalone"
 }
