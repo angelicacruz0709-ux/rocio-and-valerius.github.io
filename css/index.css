@@ -1,6 +1,6 @@
 /* Font */
 
-@font-face {
+/* @font-face {
   font-family: Caveat;
   src: url("../font/Caveat-VariableFont_wght.ttf");
 }
@@ -52,11 +52,28 @@
 @font-face {
   font-family: Bodoni;
   src: url("../font/BodoniModa_72pt-Regular.ttf");
-}
+}*/
 
 @font-face {
   font-family: Corinthia;
   src: url("../font/Corinthia-Regular.ttf");
+}
+
+@font-face {
+  font-family: Bodoni;
+  src: url("../font/BodoniModa_28pt-Regular.ttf");
+}
+@font-face {
+  font-family: Roboto;
+  src: url("../font/Roboto-Thin.ttf");
+}
+@font-face {
+  font-family: WindSong;
+  src: url("../font/WindSong-Regular.ttf");
+}
+@font-face {
+  font-family: Gwendolyn;
+  src: url("../font/Gwendolyn-Regular.ttf");
 }
 
 /* Constant */
@@ -65,7 +82,6 @@
   /* --color-1: #006263; */
   --color-1: #000000;
   --color-2: #fff8f0;
-  --color-3: #8e8d8d;
   /* --color-2: #f6fffa; */
   --color-white: #fffcf8;
   /* --color-white: #fff8f0; */
@@ -139,11 +155,15 @@ main {
 }
 
 /* Other */
-
 #title2 {
-  font-family: Corinthia;
+  font-family: WindSong;
   font-size: 80px;
 }
+/* .title2 {
+  font-family: Corinthia;
+  font-size: 80px;
+} */
+
 #title {
   font-family: var(--font-head);
   font-size: 40px;

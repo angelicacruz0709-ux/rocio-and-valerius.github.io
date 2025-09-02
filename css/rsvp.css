@@ -18,7 +18,6 @@ input:focus {
   outline: none;
 }
 input::placeholder {
-  color: var(--color-3);
   font-family: "Caveat", "Verdana", serif;
   font-size: 1rem;
   font-style: italic;
@@ -28,7 +27,6 @@ input:focus::placeholder {
   color: var(--color-2);
 }
 
-/* TODO: Change color of placeholder for selects */
 select {
   background-color: var(--color-white);
   border: 2px solid var(--color-1);
@@ -78,7 +76,6 @@ textarea:focus {
   outline: none;
 }
 textarea::placeholder {
-  color: var(--color-3);
   font-family: "Caveat", "Verdana", serif;
   font-size: 1rem;
   font-style: italic;
