@@ -24,17 +24,57 @@
   font-family: Stardom;
   src: url("../font/Stardom-Regular.ttf");
 }
+@font-face {
+  font-family: Switzer;
+  src: url("../font/Switzer-Variable.ttf");
+}
+
+@font-face {
+  font-family: Domine;
+  src: url("../font/Domine-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Lexend;
+  src: url("../font/Lexend-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Monsieur;
+  src: url("../font/MonsieurLaDoulaise-Regular.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("../font/RobotoSlab-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Bodoni;
+  src: url("../font/BodoniModa_72pt-Regular.ttf");
+}
+
+@font-face {
+  font-family: Corinthia;
+  src: url("../font/Corinthia-Regular.ttf");
+}
 
 /* Constant */
 
 :root {
   /* --color-1: #006263; */
   --color-1: #000000;
-  --color-2: #ffffff;
+  --color-2: #fff8f0;
+  --color-3: #8e8d8d;
   /* --color-2: #f6fffa; */
-  --color-white: #ffffff;
+  --color-white: #fffcf8;
+  /* --color-white: #fff8f0; */
   /* --shadow: rgba(0, 0, 0, 0.3); */
   --shadow: rgb(1, 47, 6);
+  /* --font-head: "GreatVibes", "Verdana", serif; */
+  --font-head: "Bodoni", "Verdana", serif;
+  /* --font-text: "", "Verdana", serif; */
+  --font-text: "PlayfairDisplay", "Verdana", serif;
 }
 
 /* Header */
@@ -88,7 +128,7 @@ body {
   background-color: var(--color-2);
   display: flex;
   flex-direction: column;
-  font-family: "PlayfairDisplay", "Verdana", serif;
+  font-family: var(--font-text);
   margin: 0;
   min-height: 100vh;
   padding: 0;
@@ -100,16 +140,20 @@ main {
 
 /* Other */
 
+#title2 {
+  font-family: Corinthia;
+  font-size: 80px;
+}
 #title {
-  font-family: "GreatVibes", "Verdana", serif;
+  font-family: var(--font-head);
   font-size: 40px;
 }
 #subtitle {
-  font-family: "GreatVibes", "Verdana", serif;
+  font-family: var(--font-head);
   font-size: 25px;
 }
 #countdown {
-  font-family: "GreatVibes", "Verdana", serif;
+  font-family: var(--font-head);
   font-size: 25px;
   color: var(--color-1);
 }
@@ -117,7 +161,7 @@ main {
 /* Section */
 
 .section {
-  /* font-family: "ClashDisplay", "Verdana", serif; */
+  /* font-family: var(--font-text); */
   /* font-size: 35px; */
   color: var(--color-1);
   /* text-align: center; */

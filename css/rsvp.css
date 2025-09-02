@@ -10,7 +10,7 @@ input {
   font-weight: bold;
   margin-bottom: 0.75rem;
   padding: 10px;
-  width: 80%;
+  width: 75%;
 }
 input:focus {
   background-color: var(--color-1);
@@ -18,7 +18,7 @@ input:focus {
   outline: none;
 }
 input::placeholder {
-  color: var(--color-1);
+  color: var(--color-3);
   font-family: "Caveat", "Verdana", serif;
   font-size: 1rem;
   font-style: italic;
@@ -28,46 +28,19 @@ input:focus::placeholder {
   color: var(--color-2);
 }
 
-textarea {
-  background-color: var(--color-white);
-  border: 2px solid var(--color-1);
-  border-radius: 5px;
-  box-sizing: border-box;
-  color: var(--color-1);
-  font-family: "ClashDisplay", "Verdana", serif;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 0.75rem;
-  padding: 10px;
-  width: 80%;
-}
-textarea:focus {
-  background-color: var(--color-1);
-  color: var(--color-white);
-  outline: none;
-}
-textarea::placeholder {
-  color: var(--color-1);
-  font-family: "Caveat", "Verdana", serif;
-  font-size: 1rem;
-  font-style: italic;
-  font-weight: normal;
-}
-textarea:focus::placeholder {
-  color: var(--color-2);
-}
-
+/* TODO: Change color of placeholder for selects */
 select {
   background-color: var(--color-white);
   border: 2px solid var(--color-1);
   border-radius: 5px;
   box-sizing: border-box;
+  box-shadow: 0 2px 5px var(--shadow);
   color: var(--color-1);
   font-family: "Caveat", "Verdana", serif;
   font-size: 1rem;
   margin-bottom: 0.75rem;
   padding: 10px;
-  width: 80%;
+  width: 75%;
 }
 select:focus {
   background-color: var(--color-1);
@@ -85,10 +58,41 @@ select.selected {
   font-weight: bold;
 }
 
+textarea {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-1);
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px var(--shadow);
+  color: var(--color-1);
+  font-family: "ClashDisplay", "Verdana", serif;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  padding: 10px;
+  width: 75%;
+}
+textarea:focus {
+  background-color: var(--color-1);
+  color: var(--color-white);
+  outline: none;
+}
+textarea::placeholder {
+  color: var(--color-3);
+  font-family: "Caveat", "Verdana", serif;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: normal;
+}
+textarea:focus::placeholder {
+  color: var(--color-2);
+}
+
 button {
   background-color: var(--color-1);
   border: 2px solid var(--color-1);
   border-radius: 5px;
+  box-shadow: 0 2px 5px var(--shadow);
   color: var(--color-white);
   cursor: pointer;
   display: block;
@@ -99,7 +103,7 @@ button {
   margin-bottom: 0.75rem;
   padding: 20px;
   text-align: center;
-  width: 80%;
+  width: 75%;
 }
 button:hover {
   background-color: var(--color-2);
