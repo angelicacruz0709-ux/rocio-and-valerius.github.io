@@ -21,14 +21,17 @@
 
   <body>
     <header></header>
+    <script>
+      fetch("/head.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("head").innerHTML = data;
+        });
+    </script>
 
-    <div id="title">Rocio &nbsp;&&nbsp; Valerius</div>
+    <div id="head"></div>
 
-    <div id="subtitle">Freitag, 7. November 2025</div>
-
-    <div id="countdown">
-      <script src="../js/countdown.js"></script>
-    </div>
+    <script src="../js/countdown.js"></script>
 
     <div id="nav"></div>
 
@@ -43,17 +46,17 @@
               placeholder="Dein Name"
               required
             /><br />
-            <select id="event" name="event">
+            <select id="event" name="event" required>
               <option value="" disabled selected hidden>Wähle ein Event</option>
               <option value="231125">
-                23. November 2025, "Weber's Esszeit", Gutach
+                23. November 2025, "Weber's Esszeit", Gutach, Deutschland
               </option>
               <option value="040426">
-                4. April 2026, "El Convento", Mexiko-Stadt
+                4. April 2026, "El Convento", Mexiko-Stadt, Mexiko
               </option>
             </select>
             <br />
-            <select id="response" name="response">
+            <select id="response" name="response" required>
               <option value="" disabled selected hidden>Teilnahme?</option>
               <option value="Ja">Ja</option>
               <option value="Nein">Nein</option>
@@ -64,7 +67,7 @@
               name="count"
               placeholder="Anzahl Personen"
               min="0"
-              max="4"
+              max="6"
             /><br />
             <textarea
               name="other"

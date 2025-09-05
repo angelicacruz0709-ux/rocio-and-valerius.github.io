@@ -21,16 +21,17 @@
   <body>
     <header></header>
 
-    <!-- TODO: -->
-    <div id="title2">Nuestra Boda</div>
+    <script>
+      fetch("head.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("head").innerHTML = data;
+        });
+    </script>
 
-    <div id="title">ROCIO <span id="title2">&nbsp;&&nbsp;</span> VALERIUS</div>
+    <div id="head"></div>
 
-    <div id="subtitle">Freitag, 7. November 2025</div>
-
-    <div id="countdown">
-      <script src="../js/countdown.js"></script>
-    </div>
+    <script src="../js/countdown.js"></script>
 
     <div id="nav"></div>
 
@@ -39,12 +40,12 @@
         <section>
           <h2>Hochzeit</h2>
           <p>
-            Wir heiraten standesamtlich am <strong>7 November 2025</strong> in
+            Wir heiraten standesamtlich am <strong>7. November 2025</strong> in
             der <strong>Alten Neuendorfer Kirche</strong> in
-            <strong>Potsdam</strong> und freuen uns darauf mit Euch unsere Liebe
-            zu feiern.
+            <strong>Potsdam</strong> und freuen uns darauf, mit Euch unsere
+            Liebe zu feiern.
           </p>
-          <!-- <img src="/img/kiss.png" alt="Romantic kiss in Paris" width="300" /> -->
+          <img src="/img/icon.svg" alt="heart" width="100" />
         </section>
       </article>
     </main>

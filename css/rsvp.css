@@ -2,10 +2,10 @@ input {
   background-color: var(--color-white);
   border: 2px solid var(--color-1);
   border-radius: 5px;
-  box-shadow: 0 2px 5px var(--shadow);
+  box-shadow: 0 2px 5px var(--color-shadow);
   box-sizing: border-box;
   color: var(--color-1);
-  font-family: "ClashDisplay", "Verdana", serif;
+  font-family: var(--font-text);
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0.75rem;
@@ -18,9 +18,9 @@ input:focus {
   outline: none;
 }
 input::placeholder {
-  font-family: "Caveat", "Verdana", serif;
+  color: var(--color-rsvp);
+  font-family: var(--font-rsvp);
   font-size: 1rem;
-  font-style: italic;
   font-weight: normal;
 }
 input:focus::placeholder {
@@ -32,13 +32,17 @@ select {
   border: 2px solid var(--color-1);
   border-radius: 5px;
   box-sizing: border-box;
-  box-shadow: 0 2px 5px var(--shadow);
+  box-shadow: 0 2px 5px var(--color-shadow);
   color: var(--color-1);
-  font-family: "Caveat", "Verdana", serif;
+  font-family: var(--font-rsvp);
   font-size: 1rem;
   margin-bottom: 0.75rem;
   padding: 10px;
   width: 75%;
+}
+select:invalid {
+  color: var(--color-rsvp);
+  font-family: var(--font-rsvp);
 }
 select:focus {
   background-color: var(--color-1);
@@ -47,12 +51,11 @@ select:focus {
 }
 option {
   color: var(--color-2);
-  font-family: "Caveat", "Verdana", serif;
   font-size: 1rem;
   padding: 10px;
 }
 select.selected {
-  font-family: "ClashDisplay", "Verdana", serif;
+  font-family: var(--font-text);
   font-weight: bold;
 }
 
@@ -61,9 +64,9 @@ textarea {
   border: 2px solid var(--color-1);
   border-radius: 5px;
   box-sizing: border-box;
-  box-shadow: 0 2px 5px var(--shadow);
+  box-shadow: 0 2px 5px var(--color-shadow);
   color: var(--color-1);
-  font-family: "ClashDisplay", "Verdana", serif;
+  font-family: var(--font-text);
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0.75rem;
@@ -73,12 +76,13 @@ textarea {
 textarea:focus {
   background-color: var(--color-1);
   color: var(--color-white);
+  font-family: var(--font-text);
   outline: none;
 }
 textarea::placeholder {
-  font-family: "Caveat", "Verdana", serif;
+  color: var(--color-rsvp);
+  font-family: var(--font-rsvp);
   font-size: 1rem;
-  font-style: italic;
   font-weight: normal;
 }
 textarea:focus::placeholder {
@@ -89,11 +93,11 @@ button {
   background-color: var(--color-1);
   border: 2px solid var(--color-1);
   border-radius: 5px;
-  box-shadow: 0 2px 5px var(--shadow);
+  box-shadow: 0 2px 5px var(--color-shadow);
   color: var(--color-white);
   cursor: pointer;
   display: block;
-  font-family: "Caveat", "Verdana", serif;
+  font-family: var(--font-rsvp);
   font-size: 18px;
   font-weight: bold;
   margin: 0px auto;

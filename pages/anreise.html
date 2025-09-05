@@ -21,13 +21,17 @@
   <body>
     <header></header>
 
-    <div id="title">Rocio &nbsp;&&nbsp; Valerius</div>
+    <script>
+      fetch("/head.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("head").innerHTML = data;
+        });
+    </script>
 
-    <div id="subtitle">Freitag, 7. November 2025</div>
+    <div id="head"></div>
 
-    <div id="countdown">
-      <script src="../js/countdown.js"></script>
-    </div>
+    <script src="../js/countdown.js"></script>
 
     <div id="nav"></div>
 

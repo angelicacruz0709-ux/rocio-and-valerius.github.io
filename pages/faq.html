@@ -22,13 +22,17 @@
   <body>
     <header></header>
 
-    <div id="title">Rocio &nbsp;&&nbsp; Valerius</div>
+    <script>
+      fetch("/head.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("head").innerHTML = data;
+        });
+    </script>
 
-    <div id="subtitle">Freitag, 7. November 2025</div>
+    <div id="head"></div>
 
-    <div id="countdown">
-      <script src="../js/countdown.js"></script>
-    </div>
+    <script src="../js/countdown.js"></script>
 
     <div id="nav"></div>
 
@@ -36,6 +40,15 @@
       <article class="section">
         <section class="faq">
           <h2>Häufig gestellte Fragen (FAQ)</h2>
+
+          <details>
+            <summary>Bis wann ist eine Rückmeldung erwünscht?</summary>
+            <p>
+              Für die Hochzeitsfeier in Deutschland am 23. November 2025:
+              Sonntag, 16.11.2025.<br />Für die Hochzeitsfeier in Mexiko am 4.
+              April 2026: Samstag, 28.02.2026.
+            </p>
+          </details>
 
           <details>
             <summary>Wie kann ich mich zu einem Event anmelden?</summary>
@@ -49,10 +62,34 @@
           </details>
 
           <details>
-            <summary>Gibt es eine Geschenkliste?</summary>
+            <summary>Gibt es eine Geschenkeliste?</summary>
             <p>
               Gemeinsam mit Euch zu feiern ist für uns das größte Geschenk. Wir
-              freuen uns über gute Laune und Spaß.
+              freuen uns über gute Laune und ein Lachen.
+            </p>
+          </details>
+
+          <details>
+            <summary>Was kann ich tun, wenn ich nicht teilnehmen kann?</summary>
+            <p>
+              Fehlende Teilnahmen und kurzfristige Absagen sind mit einem Besuch
+              bei uns innerhalb der nächsten 365 Tage ab Eventtermin
+              auszugleichen. Es wird Kaffee und Kuchen angeboten.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Was muss ich bei einer Reise nach Mexiko beachten?
+            </summary>
+            <p>
+              Allgemeine Reisehinweise sind zu finden unter
+              <a
+                href="https://www.auswaertiges-amt.de/de/service/laender/mexiko-node/mexikosicherheit-213648/"
+                target="_blank"
+                style="color: rgb(62, 228, 250)"
+                >Auswärtiges Amt | Mexiko: Reise- und Sicherheitshinweise</a
+              >.
             </p>
           </details>
         </section>

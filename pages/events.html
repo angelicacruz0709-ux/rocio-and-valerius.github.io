@@ -21,13 +21,17 @@
   <body>
     <header></header>
 
-    <div id="title">Rocio &nbsp;&&nbsp; Valerius</div>
+    <script>
+      fetch("/head.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("head").innerHTML = data;
+        });
+    </script>
 
-    <div id="subtitle">Freitag, 7. November 2025</div>
+    <div id="head"></div>
 
-    <div id="countdown">
-      <script src="../js/countdown.js"></script>
-    </div>
+    <script src="../js/countdown.js"></script>
 
     <div id="nav"></div>
 
@@ -37,8 +41,8 @@
           <h2>Event 1</h2>
           <h3>Standesamtliche Hochzeit</h3>
           <p>
-            7. November 2025, 12:00 Uhr, "Alte Neuendorfer Kirche", Potsdam,
-            Deutschland
+            7. November 2025, 12:00 Uhr
+            <br />"Alte Neuendorfer Kirche" <br />Potsdam, Deutschland
           </p>
         </section>
       </article>
@@ -48,7 +52,9 @@
           <h2>Event 2</h2>
           <h3>Hochzeitsfeier Deutschland</h3>
           <p>
-            23. November 2025, 12:00 Uhr, "Weber's Esszeit", Gutach, Deutschland
+            23. November 2025, 12:00 Uhr<br />
+            "Weber's Esszeit"<br />
+            Gutach, Deutschland
           </p>
         </section>
       </article>
@@ -57,7 +63,11 @@
         <section>
           <h2>Event 3</h2>
           <h3>Hochzeitsfeier Mexiko</h3>
-          <p>4. April 2026, 18:00 Uhr, "El Convento", Mexiko-Stadt, Mexiko</p>
+          <p>
+            4. April 2026, 18:00 Uhr<br />
+            "El Convento"<br />
+            Mexiko-Stadt, Mexiko
+          </p>
         </section>
       </article>
     </main>

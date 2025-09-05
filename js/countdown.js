@@ -23,6 +23,6 @@ var x = setInterval(function () {
   // If the countdown is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("countdown").innerHTML = "Es geht los!";
+    document.getElementById("countdown").innerHTML = "Wir haben 'ja' gesagt!";
   }
 }, 1000);

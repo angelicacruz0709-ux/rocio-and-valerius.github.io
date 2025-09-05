@@ -7,7 +7,7 @@
   background-color: var(--color-white);
   border: 2px solid var(--color-1);
   border-radius: 5px;
-  box-shadow: 0 2px 5px var(--shadow);
+  box-shadow: 0 2px 5px var(--color-shadow);
   margin-bottom: 0.75rem;
   padding: 0.75rem 1rem;
   transition: background-color 0.5s ease, box-shadow 0.5s ease;
@@ -15,7 +15,7 @@
 }
 .faq details[open] {
   background-color: var(--color-1);
-  box-shadow: 0 2px 5px var(--shadow);
+  box-shadow: 0 2px 5px var(--color-1);
   color: var(--color-white);
 }
 .faq summary {
