@@ -6,9 +6,10 @@ input {
   box-sizing: border-box;
   color: var(--color-1);
   font-family: var(--font-text);
+  font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0.75rem;
-  padding: 2vw;
+  padding: 1.3vw;
   width: 75%;
 }
 input:focus {
@@ -33,8 +34,9 @@ select {
   box-shadow: 0 2px 5px var(--color-shadow);
   color: var(--color-1);
   font-family: var(--font-rsvp);
+  font-size: 1rem;
   margin-bottom: 0.75rem;
-  padding: 2vw;
+  padding: 1.3vw;
   width: 75%;
 }
 select:invalid {
@@ -48,7 +50,7 @@ select:focus {
 }
 option {
   color: var(--color-2);
-  padding: 2vw;
+  padding: 1.3vw;
 }
 select.selected {
   font-family: var(--font-text);
@@ -64,8 +66,9 @@ textarea {
   color: var(--color-1);
   font-family: var(--font-text);
   font-weight: bold;
+  font-size: 1rem;
   margin-bottom: 0.75rem;
-  padding: 2vw;
+  padding: 1.3vw;
   width: 75%;
 }
 textarea:focus {
@@ -92,10 +95,11 @@ button {
   cursor: pointer;
   display: block;
   font-family: var(--font-rsvp);
+  font-size: 1rem;
   font-weight: bold;
   margin: 0px auto;
   margin-bottom: 0.75rem;
-  padding: 2vw;
+  padding: 1.3vw;
   text-align: center;
   width: 75%;
 }
