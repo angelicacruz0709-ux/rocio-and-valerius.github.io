@@ -1,7 +1,6 @@
 .faq {
   margin: 2rem auto;
-  max-width: 700px;
-  width: 90%;
+  width: 75%;
 }
 .faq details {
   background-color: var(--color-white);
@@ -23,6 +22,8 @@
   display: flex;
   font-weight: bold;
   list-style: none;
+  position: relative;
+  padding-right: 2em;
 }
 .faq summary::-webkit-details-marker {
   display: none;
@@ -30,28 +31,20 @@
 .faq summary::after {
   color: var(--color-1);
   content: "▶";
-  display: inline-block;
-  margin-left: auto;
+  position: absolute;
+  right: 0;
   text-align: center;
-  transform-origin: center;
-  transition: transform 0.5s ease;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.5s ease, color 0.5s ease;
   width: 1em;
 }
 .faq details[open] summary::after {
   color: var(--color-white);
-  transform: rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
 }
 .faq details p {
-  /* color: var(--color-white); */
-  /* line-height: 1.5; */
-  /* max-height: 0; */
-  /* opacity: 0; */
   overflow: hidden;
   text-align: left;
   transition: max-height 0.5s ease, opacity 0.5s ease;
 }
-/* .faq details[open] p {
-  text-align: left;
-  max-height: 500px;
-  opacity: 1;
-} */

@@ -24,10 +24,10 @@
 /* Constant */
 
 :root {
-  --color-1: #0a2906;
+  --color-1: #12430c;
   --color-2: #fff8f0;
   --color-rsvp: #7e7e7e;
-  --color-shadow: #0a2906b6;
+  --color-shadow: #12430cb6;
   --color-white: #ffffff;
   --font-other: "other", "Verdana", serif;
   --font-rsvp: "rsvp", "Verdana", serif;
@@ -39,55 +39,60 @@
 /* Header */
 
 header {
-  background: url(../img/flowers.png) no-repeat;
+  align-items: center;
+  background: url("../img/flowers.png") no-repeat top center;
   background-color: var(--color-2);
-  background-position: top;
-  background-size: contain;
-  height: 110px;
-  width: 100%;
+  background-size: 100% auto;
   color: var(--color-1);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 12vw;
+  width: 100%;
 }
 
 /* Navigation */
 
-.nav {
+nav {
   background: var(--color-white);
-  box-shadow: 0 2px 5px var(--color-shadow);
-  display: flex;
-  font-family: var(--font-text);
-  gap: 60px;
-  justify-content: center;
-  margin: 15px 0 15px 0;
-  padding: 10px 0;
+  box-shadow: 0 2px 5px var(--color-1);
+  margin: 5vw 0 5vw 0;
+  width: 100%;
 }
-.nav a {
+nav ul {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  white-space: nowrap;
+}
+nav li {
+  flex: 1 1 auto;
+  text-align: center;
+}
+nav a {
+  box-sizing: border-box;
   color: var(--color-1);
-  font-size: 16px;
-  font-weight: bold;
+  display: block;
+  font-size: 3vw;
+  padding: 2vw;
   text-decoration: none;
+  width: 100%;
 }
 
 /* Body */
 
-/* html,
-body {
-  height: 100%;
-  margin: 0;
-} */
+body,
 html {
-  margin: 0 0 0 0;
-  min-height: 100%;
-  padding: 0 0 0 0;
-  position: relative;
-}
-body {
   background-color: var(--color-2);
   display: flex;
   flex-direction: column;
   font-family: var(--font-text);
-  margin: 0;
+  margin: 0 0 0 0;
   min-height: 100vh;
-  padding: 0;
+  padding: 0 0 0 0;
   text-align: center;
 }
 main {
@@ -98,28 +103,28 @@ main {
 
 #title {
   font-family: var(--font-title);
-  font-size: 30px;
+  font-size: 5vw;
   color: var(--color-1);
 }
 #ampersand {
   font-family: var(--font-title);
-  font-size: 40px;
+  font-size: 7vw;
   color: var(--color-1);
 }
 #subtitle {
   font-family: var(--font-subtitle);
-  font-size: 40px;
+  font-size: 7vw;
   color: var(--color-1);
 }
 #date {
   font-family: var(--font-other);
-  font-size: 20px;
+  font-size: 3.5vw;
 }
 #countdown {
   font-family: var(--font-other);
-  font-size: 20px;
+  font-size: 3.5vw;
   color: var(--color-1);
-  margin: 10px 0 0 0;
+  margin: 1vw 0 0 0;
 }
 
 /* Section */
@@ -135,12 +140,10 @@ main {
 
 #footer {
   background-color: var(--color-1);
-  bottom: 0;
   color: var(--color-2);
   font-family: var(--font-other);
-  font-size: 13px;
-  margin: 20px 0 0 0;
-  padding: 10px;
+  font-size: 2vw;
+  padding: 1.5vw;
   position: static;
   width: 100%;
 }
