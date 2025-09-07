@@ -84,7 +84,7 @@ nav a {
   box-sizing: border-box;
   color: var(--color-1);
   display: block;
-  font-size: clamp(5px, 2vw, 15px);
+  font-size: clamp(10px, 2vw, 15px);
   padding: 1vw;
   text-decoration: none;
   width: 100%;
@@ -115,26 +115,26 @@ main {
 
 #title {
   font-family: var(--font-title);
-  font-size: clamp(10px, 2.25vw, 30px);
+  font-size: clamp(20px, 2.25vw, 30px);
   color: var(--color-1);
 }
 #ampersand {
   font-family: var(--font-title);
-  font-size: clamp(13.33px, 3vw, 40px);
+  font-size: clamp(26.67px, 3vw, 40px);
   color: var(--color-1);
 }
 #subtitle {
   font-family: var(--font-subtitle);
-  font-size: clamp(13.33px, 3vw, 40px);
+  font-size: clamp(26.67px, 3vw, 40px);
   color: var(--color-1);
 }
 #date {
   font-family: var(--font-other);
-  font-size: clamp(8.33px, 1.88vw, 25px);
+  font-size: clamp(16.67px, 1.88vw, 25px);
 }
 #countdown {
   font-family: var(--font-other);
-  font-size: clamp(8.33px, 1.88vw, 25px);
+  font-size: clamp(16.67px, 1.88vw, 25px);
   color: var(--color-1);
   margin: 0.5vw 0 0 0;
 }
@@ -167,8 +167,9 @@ img.img_heart {
   background-color: var(--color-1);
   color: var(--color-2);
   font-family: var(--font-other);
-  font-size: clamp(5px, 1.13vw, 15px);
-  margin: 2vw 0 0 0;
+  font-size: clamp(10px, 1.13vw, 15px);
+  margin-top: auto;
+  /* margin: 2vw 0 0 0; */
   padding: 1vw;
   position: static;
   width: 100%;
