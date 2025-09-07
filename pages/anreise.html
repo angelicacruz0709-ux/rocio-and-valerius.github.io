@@ -9,7 +9,7 @@
     ></script>
     <script>
       $(function () {
-        $("header").load("/header.html");
+        $("head").load("/head.html");
       });
     </script>
     <link
@@ -22,14 +22,14 @@
     <header></header>
 
     <script>
-      fetch("/head.html")
+      fetch("/header.html")
         .then((response) => response.text())
         .then((data) => {
-          document.getElementById("head").innerHTML = data;
+          document.getElementById("header").innerHTML = data;
         });
     </script>
 
-    <div id="head"></div>
+    <div id="header"></div>
 
     <script src="../js/countdown.js"></script>
 

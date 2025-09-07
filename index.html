@@ -9,7 +9,7 @@
     ></script>
     <script>
       $(function () {
-        $("header").load("/header.html");
+        $("head").load("/head.html");
       });
     </script>
     <link
@@ -20,26 +20,16 @@
 
   <body>
     <header></header>
-    <!-- 
+
     <script>
-      fetch("head.html")
+      fetch("header.html")
         .then((response) => response.text())
         .then((data) => {
-          document.getElementById("head").innerHTML = data;
+          document.getElementById("header").innerHTML = data;
         });
     </script>
 
-    <div id="head"></div> -->
-
-    <div id="title">Unsere Hochzeit</div>
-
-    <div id="subtitle">
-      ROCIO<span id="ampersand">&nbsp;&&nbsp;</span> VALERIUS
-    </div>
-
-    <div id="date">7. November 2025</div>
-
-    <div id="countdown"></div>
+    <div id="header"></div>
 
     <script src="../js/countdown.js"></script>
 
