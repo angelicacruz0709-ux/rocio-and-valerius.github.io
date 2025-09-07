@@ -76,22 +76,24 @@ nav a {
   box-sizing: border-box;
   color: var(--color-1);
   display: block;
-  font-size: 3vw;
+  font-size: clamp(3vw, 3vw, 20px);
   padding: 2vw;
   text-decoration: none;
   width: 100%;
 }
 
 /* Body */
-
-body,
 html {
+  height: 100%;
+}
+body {
   background-color: var(--color-2);
   display: flex;
   flex-direction: column;
   font-family: var(--font-text);
   margin: 0 0 0 0;
   min-height: 100vh;
+  overflow-x: hidden;
   padding: 0 0 0 0;
   text-align: center;
 }
@@ -103,26 +105,26 @@ main {
 
 #title {
   font-family: var(--font-title);
-  font-size: 5vw;
+  font-size: clamp(5vw, 5vw, 30px);
   color: var(--color-1);
 }
 #ampersand {
   font-family: var(--font-title);
-  font-size: 7vw;
+  font-size: clamp(7vw, 7vw, 40px);
   color: var(--color-1);
 }
 #subtitle {
   font-family: var(--font-subtitle);
-  font-size: 7vw;
+  font-size: clamp(7vw, 7vw, 40px);
   color: var(--color-1);
 }
 #date {
   font-family: var(--font-other);
-  font-size: 3.5vw;
+  font-size: clamp(3.5vw, 3.5vw, 30px);
 }
 #countdown {
   font-family: var(--font-other);
-  font-size: 3.5vw;
+  font-size: clamp(3.5vw, 3.5vw, 30px);
   color: var(--color-1);
   margin: 1vw 0 0 0;
 }
@@ -142,7 +144,7 @@ main {
   background-color: var(--color-1);
   color: var(--color-2);
   font-family: var(--font-other);
-  font-size: 2vw;
+  font-size: clamp(2vw, 2vw, 10px);
   padding: 1.5vw;
   position: static;
   width: 100%;
