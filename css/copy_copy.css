@@ -38,11 +38,11 @@
 
 /* Global */
 
-/* * { */
-/* box-sizing: border-box; */
-/* margin: 0.5vw 0 0.5vw 0; */
-/* padding: 0.5vw 0 0.5vw 0; */
-/* } */
+* {
+  box-sizing: border-box;
+  /* margin: 0.5vw 0 0.5vw 0; */
+  /* padding: 0.5vw 0 0.5vw 0; */
+}
 
 /* Header */
 
