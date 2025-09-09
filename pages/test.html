@@ -2,7 +2,7 @@
 
 <html lang="de-DE">
   <head>
-    <link rel="stylesheet" href="/css/rsvp.css" />
+    <link rel="stylesheet" href="/css/index.css" />
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -10,7 +10,7 @@
     ></script>
     <script>
       $(function () {
-        $("head").load("/head.html");
+        $("header").load("/header.html");
       });
     </script>
     <link
@@ -22,21 +22,20 @@
   <body>
     <header></header>
     <script>
-      fetch("/header.html")
+      fetch("/head.html")
         .then((response) => response.text())
         .then((data) => {
-          document.getElementById("header").innerHTML = data;
+          document.getElementById("head").innerHTML = data;
         });
     </script>
 
-    <div id="header"></div>
+    <div id="head"></div>
 
     <script src="../js/countdown.js"></script>
 
     <div id="nav"></div>
 
-    <main>
-    </main>
+    <main></main>
 
     <div id="footer"></div>
   </body>
