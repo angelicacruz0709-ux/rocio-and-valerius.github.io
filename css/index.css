@@ -24,13 +24,13 @@
 /* Constant */
 
 :root {
-  --color-1: hwb(113 0% 76%);
-  --color-2: #f6f4f4;
-  --color-rsvp: #7e7e7e;
-  --color-shadow: #22451eb6;
-  --color-white: #ffffff;
+  --color-1: #465e45;
+  --color-2: #fcfcfb;
+  --color-rsvp: #465e45;
+  --color-shadow: #678366;
+  --color-white: hsl(0, 0%, 100%);
   --font-other: "other", "Verdana", serif;
-  --font-rsvp: "rsvp", "Verdana", serif;
+  --font-rsvp: "other", "Verdana", serif;
   --font-subtitle: "subtitle", "Verdana", serif;
   --font-text: "other", serif;
   --font-title: "title", "Verdana", serif;
@@ -115,7 +115,7 @@ main {
 
 #title {
   font-family: var(--font-title);
-  font-size: clamp(20px, 2.25vw, 0px);
+  font-size: clamp(30px, 2.25vw, 0px);
   color: var(--color-1);
 }
 #ampersand {
@@ -135,12 +135,13 @@ main {
 
 h2 {
   font-family: var(--font-title);
-  font-size: clamp(12px, 1 vw, 20px);
+  font-size: clamp(20px, 2.25vw, 0px);
+  color: var(--color-1);
 }
 
 h3 {
   font-family: var(--font-subtitle);
-  font-size: clamp(26.67px, 3vw, 40px);
+  font-size: clamp(19px, 3vw, 40px);
   color: var(--color-1);
 }
 #countdown {
