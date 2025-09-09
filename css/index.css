@@ -55,7 +55,6 @@ header {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-bottom: 12vw;
   width: 100%;
 }
 
@@ -105,7 +104,7 @@ nav a:hover {
   opacity: 0.7;
 }
 
-/* Body */
+/* HTML */
 
 html {
   height: 100%;
@@ -124,6 +123,16 @@ body {
 }
 main {
   flex: 1;
+}
+h2 {
+  color: var(--color-1);
+  font-family: var(--font-title);
+  font-size: clamp(20px, 2.25vw, 0px);
+}
+h3 {
+  color: var(--color-1);
+  font-family: var(--font-subtitle);
+  font-size: clamp(19px, 3vw, 40px);
 }
 
 /* Other */
@@ -147,24 +156,14 @@ main {
   font-family: var(--font-other);
   font-size: clamp(16.67px, 1.88vw, 25px);
 }
-
-h2 {
-  font-family: var(--font-title);
-  font-size: clamp(20px, 2.25vw, 0px);
-  color: var(--color-1);
-}
-
-h3 {
-  font-family: var(--font-subtitle);
-  font-size: clamp(19px, 3vw, 40px);
-  color: var(--color-1);
-}
 #countdown {
   font-family: var(--font-other);
   font-size: clamp(16.67px, 1.88vw, 25px);
   color: var(--color-1);
   margin: 0.5vw 0 0 0;
 }
+
+/* Image */
 
 img.img_church {
   display: block;
