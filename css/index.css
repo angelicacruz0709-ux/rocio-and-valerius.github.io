@@ -24,15 +24,15 @@
 /* Constant */
 
 :root {
-  --color-1: #12430c;
-  --color-2: #fff8f0;
+  --color-1: hwb(113 0% 76%);
+  --color-2: #f6f4f4;
   --color-rsvp: #7e7e7e;
-  --color-shadow: #12430cb6;
+  --color-shadow: #22451eb6;
   --color-white: #ffffff;
   --font-other: "other", "Verdana", serif;
   --font-rsvp: "rsvp", "Verdana", serif;
   --font-subtitle: "subtitle", "Verdana", serif;
-  --font-text: "Verdana", serif;
+  --font-text: "other", serif;
   --font-title: "title", "Verdana", serif;
 }
 
@@ -115,7 +115,7 @@ main {
 
 #title {
   font-family: var(--font-title);
-  font-size: clamp(20px, 2.25vw, 30px);
+  font-size: clamp(20px, 2.25vw, 0px);
   color: var(--color-1);
 }
 #ampersand {
@@ -131,6 +131,17 @@ main {
 #date {
   font-family: var(--font-other);
   font-size: clamp(16.67px, 1.88vw, 25px);
+}
+
+h2 {
+  font-family: var(--font-title);
+  font-size: clamp(12px, 1 vw, 20px);
+}
+
+h3 {
+  font-family: var(--font-subtitle);
+  font-size: clamp(26.67px, 3vw, 40px);
+  color: var(--color-1);
 }
 #countdown {
   font-family: var(--font-other);
