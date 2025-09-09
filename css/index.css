@@ -14,7 +14,7 @@
 }
 @font-face {
   font-family: text;
-  src: url("../font/TenorSans-Regular.ttf");
+  src: url("../font/BodoniModa_9pt-Regular.ttf");
 }
 @font-face {
   font-family: title;
@@ -34,6 +34,7 @@
   --font-subtitle: "subtitle", "Verdana", serif;
   --font-text: "other", serif;
   --font-title: "title", "Verdana", serif;
+  --font-nav: "text", "Verdana", serif;
 }
 
 /* Global */
@@ -66,6 +67,7 @@ nav {
   box-shadow: 0 2px 5px var(--color-1);
   margin: 1.4vw 0 1.4vw 0;
   width: 100%;
+  font-family: var(--font-nav);
 }
 nav ul {
   align-items: center;
@@ -84,7 +86,8 @@ nav a {
   box-sizing: border-box;
   color: var(--color-1);
   display: block;
-  font-size: clamp(10px, 2vw, 15px);
+  font-family: var(--font-nav);
+  font-size: clamp(12px, 2vw, 15px);
   padding: 1vw;
   text-decoration: none;
   width: 100%;
@@ -141,7 +144,7 @@ h2 {
 
 h3 {
   font-family: var(--font-subtitle);
-  font-size: clamp(19px, 3vw, 40px);
+  font-size: clamp(10px, 0vw, 0 px);
   color: var(--color-1);
 }
 #countdown {
