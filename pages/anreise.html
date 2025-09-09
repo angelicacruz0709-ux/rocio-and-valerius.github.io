@@ -2,39 +2,29 @@
 
 <html lang="de-DE">
   <head>
-    <link rel="stylesheet" href="/css/index.css" />
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-    <script>
-      $(function () {
-        $("header").load("/head.html");
-      });
-    </script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link rel="stylesheet" href="/css/index.css" />
+    <script>
+      $(function () {
+        $("head").append("/head.html");
+      });
+    </script>
   </head>
 
   <body>
-    <header></header>
-
-    <script>
-      fetch("/logo.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("logo").innerHTML = data;
-        });
-    </script>
-
-    <div id="logo"></div>
-
-    <script src="../js/countdown.js"></script>
-
-    <div id="nav"></div>
+    <header>
+      <div id="logo"></div>
+      <script src="../js/countdown.js"></script>
+      <nav></nav>
+    </header>
 
     <main>
       <article class="section">
@@ -97,6 +87,21 @@
       </article>
     </main>
 
-    <div id="footer"></div>
+    <footer></footer>
+
+    <script>
+      fetch("/logo.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("logo").innerHTML = data;
+        });
+    </script>
+
+    <script>
+      $(function () {
+        $("nav").load("/nav.html");
+        $("footer").load("/footer.html");
+      });
+    </script>
   </body>
 </html>
