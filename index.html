@@ -22,14 +22,14 @@
     <header></header>
 
     <script>
-      fetch("head.html")
+      fetch("logo.html")
         .then((response) => response.text())
         .then((data) => {
-          document.getElementById("head").innerHTML = data;
+          document.getElementById("logo").innerHTML = data;
         });
     </script>
 
-    <div id="head"></div>
+    <div id="logo"></div>
 
     <script src="../js/countdown.js"></script>
 
