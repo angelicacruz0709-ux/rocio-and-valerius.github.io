@@ -27,12 +27,12 @@
   --color-1: #465e45;
   --color-2: #fcfcfb;
   --color-rsvp: #465e45;
-  --color-shadow: #678366;
-  --color-white: hsl(0, 0%, 100%);
+  --color-shadow: #465e4580;
+  --color-white: #ffffff;
   --font-other: "other", "Verdana", serif;
   --font-rsvp: "other", "Verdana", serif;
   --font-subtitle: "subtitle", "Verdana", serif;
-  --font-text: "other", serif;
+  --font-text: "other", "Verdana", serif;
   --font-title: "title", "Verdana", serif;
 }
 
@@ -64,7 +64,7 @@ header {
 #logo {
   color: inherit;
   display: block;
-  padding-top: 7vw;
+  padding-top: 6vw;
   text-decoration: none;
 }
 #logo:hover {
@@ -164,6 +164,17 @@ h3 {
   margin: 0.5vw 0 0 0;
 }
 
+/* Mobile */
+
+a:active,
+button:active {
+  box-shadow: inset 1px 1px 6px var(--color-shadow),
+    inset -1px -1px 6px var(--color-shadow);
+  font-weight: bold;
+  transform: scale(0.95);
+  transition: all 0.5s ease;
+}
+
 /* Image */
 
 img.img_church {
@@ -186,7 +197,8 @@ footer {
   color: var(--color-2);
   font-family: var(--font-other);
   font-size: clamp(10px, 1.13vw, 15px);
-  margin-top: auto;
+  /* margin-top: auto; */
+  margin-top: 0;
   padding: 1vw;
   position: static;
   width: 100%;
