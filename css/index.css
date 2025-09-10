@@ -232,7 +232,7 @@ footer {
   color: var(--color-2);
   font-family: var(--font-other);
   font-size: clamp(10px, 1.13vw, 15px);
-  /* margin-top: auto; */
+  margin: 40px 0 0 0;
   padding: 1vw;
   /* position: static; */
   width: 100%;
