@@ -10,7 +10,8 @@
 }
 @font-face {
   font-family: subtitle;
-  src: url("../font/BodoniModa_28pt-Medium.ttf");
+  src: url("../font/CrimsonText-SemiBold.ttf");
+  /* src: url("../font/BodoniModa_28pt-Medium.ttf"); */
 }
 @font-face {
   font-family: title;
