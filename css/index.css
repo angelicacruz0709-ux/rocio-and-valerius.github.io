@@ -101,7 +101,7 @@ nav a {
   background: var(--color-white);
   color: var(--color-1);
   display: block;
-  font-size: clamp(18px, 2vw, 18px);
+  font-size: clamp(10px, 2vw, 18px);
   padding: 1.4vw;
   text-decoration: none;
   width: 100%;
