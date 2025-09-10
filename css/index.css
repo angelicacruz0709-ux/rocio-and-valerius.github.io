@@ -99,7 +99,7 @@ nav a {
   background: var(--color-white);
   color: var(--color-1);
   display: block;
-  font-size: clamp(10px, 2vw, 15px);
+  font-size: clamp(15px, 2vw, 16px);
   padding: 1.4vw;
   text-decoration: none;
   width: 100%;
@@ -132,12 +132,12 @@ main {
 h2 {
   color: var(--color-1);
   font-family: var(--font-title);
-  font-size: clamp(20px, 2.25vw, 0px);
+  font-size: clamp(22px, 2.25vw, -0.9px);
 }
 h3 {
   color: var(--color-1);
   font-family: var(--font-subtitle);
-  font-size: clamp(19px, 3vw, 40px);
+  font-size: clamp(19px, 1 vw, 0px);
 }
 
 /* Other */
