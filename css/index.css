@@ -104,12 +104,17 @@ nav a {
 nav a:hover {
   opacity: 0.7;
 }
+nav a.active {
+  background-color: var(--color-shadow);
+  color: var(--color-2);
+  font-weight: bold;
+  border-radius: px;
+}
 
 /* HTML */
 
 html {
   height: 100%;
-  margin: 0;
 }
 body {
   background-color: var(--color-2);
@@ -172,7 +177,7 @@ button:active {
   box-shadow: inset 1px 1px 6px var(--color-shadow),
     inset -1px -1px 6px var(--color-shadow);
   font-weight: bold;
-  transform: scale(0.95);
+  /* transform: scale(0.95); */
 }
 
 /* Image */

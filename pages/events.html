@@ -26,6 +26,8 @@
     </script>
   </head>
 
+  <script src="../js/nav.js" defer></script>
+
   <body>
     <header>
       <div id="logo"></div>
@@ -81,9 +83,15 @@
         });
     </script>
 
+    <script src="/js/nav.js">
+      defer
+    </script>
+
     <script>
       $(function () {
-        $("nav").load("/nav.html");
+        $("nav").load("/nav.html", function () {
+          highlightActiveNav();
+        });
         $("footer").load("/footer.html");
       });
     </script>
