@@ -134,9 +134,9 @@ body {
   padding: 0;
   text-align: center;
 }
-main {
+/* main {
   flex: 1;
-}
+} */
 h2 {
   color: var(--color-1);
   font-family: var(--font-title);
@@ -146,6 +146,11 @@ h3 {
   color: var(--color-1);
   font-family: var(--font-subtitle);
   font-size: clamp(19px, 3vw, 40px);
+}
+section {
+  margin: 2vw auto;
+  max-width: 90vw;
+  padding: 0 1vw;
 }
 
 /* Other */
@@ -188,11 +193,23 @@ button:active {
 
 /* Image */
 
+img.img_cake {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 30vw;
+}
 img.img_church {
   display: block;
   height: auto;
   margin: 0 auto;
   max-width: 25vw;
+}
+img.img_eagle {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 30vw;
 }
 img.img_heart {
   display: block;
@@ -206,7 +223,7 @@ img.img_heart {
 .heart-icon {
   --fa-animation-duration: 1.5s;
   color: #d70000;
-  font-size: 1.2vw;
+  font-size: 1vw;
   vertical-align: middle;
 }
 
@@ -220,5 +237,5 @@ footer {
   /* position: static; */
   width: 100%;
   bottom: 0;
-  /* position: absolute; */
+  position: absolute;
 }
