@@ -109,6 +109,7 @@ nav a:hover {
 
 html {
   height: 100%;
+  margin: 0;
 }
 body {
   background-color: var(--color-2);
@@ -172,7 +173,6 @@ button:active {
     inset -1px -1px 6px var(--color-shadow);
   font-weight: bold;
   transform: scale(0.95);
-  transition: all 0.5s ease;
 }
 
 /* Image */
@@ -192,13 +192,19 @@ img.img_heart {
 
 /* Footer */
 
+.heart-icon {
+  --fa-animation-duration: 1.5s;
+  color: #d70000;
+  font-size: 1.2vw;
+  vertical-align: middle;
+}
+
 footer {
   background-color: var(--color-1);
   color: var(--color-2);
   font-family: var(--font-other);
   font-size: clamp(10px, 1.13vw, 15px);
-  /* margin-top: auto; */
-  margin-top: 0;
+  margin-top: auto;
   padding: 1vw;
   position: static;
   width: 100%;
