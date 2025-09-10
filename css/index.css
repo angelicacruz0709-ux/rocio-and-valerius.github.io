@@ -34,6 +34,7 @@
   --font-subtitle: "subtitle", "Verdana", serif;
   --font-text: "other", "Verdana", serif;
   --font-title: "title", "Verdana", serif;
+  --font-nav: "subtitle", "Verdana", serif;
 }
 
 /* Global */
@@ -87,6 +88,8 @@ nav ul {
   margin: 0;
   padding: 0;
   white-space: nowrap;
+  font-family: var(--font-nav);
+
 }
 nav li {
   flex: 1 1 auto;
