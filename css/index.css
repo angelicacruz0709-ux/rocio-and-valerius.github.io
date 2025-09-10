@@ -10,20 +10,21 @@
 }
 @font-face {
   font-family: subtitle;
-  src: url("../font/Playfair_144pt_SemiExpanded-SemiBold.ttf");
+  src: url("../font/BodoniModa_28pt-Medium.ttf");
+}
+@font-face {
+  font-family: title;
+  src: url("../font/WindSong-Regular.ttf");
 }
 /* @font-face {
   font-family: text;
   src: url("../font/TenorSans-Regular.ttf");
 }*/
 @font-face {
-  font-family: title;
-  src: url("../font/WindSong-Regular.ttf");
-}
-@font-face {
   font-family: text;
   src: url("../font/CrimsonText-Regular.ttf");
 }
+
 /* Constant */
 
 :root {
@@ -32,12 +33,13 @@
   --color-rsvp: #465e45;
   --color-shadow: #465e4580;
   --color-white: #ffffff;
+  --font-footer: "other", "Verdana", serif;
+  --font-nav: "subtitle", "Verdana", serif;
   --font-other: "text", "Verdana", serif;
   --font-rsvp: "rsvp", "Verdana", serif;
   --font-subtitle: "subtitle", "Verdana", serif;
   --font-text: "text", "Verdana", serif;
   --font-title: "title", "Verdana", serif;
-  --font-nav: "subtitle", "Verdana", serif;
 }
 
 /* Global */
@@ -235,7 +237,7 @@ img.img_heart {
 footer {
   background-color: var(--color-1);
   color: var(--color-2);
-  font-family: var(--font-other);
+  font-family: var(--font-footer);
   font-size: clamp(10px, 1.13vw, 15px);
   margin: 40px 0 0 0;
   padding: 1vw;
