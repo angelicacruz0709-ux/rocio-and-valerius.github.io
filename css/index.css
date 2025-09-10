@@ -127,7 +127,7 @@ html {
 }
 body {
   background-color: var(--color-2);
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   font-family: var(--font-text);
   margin: 0;
@@ -143,24 +143,24 @@ body {
 h2 {
   color: var(--color-1);
   font-family: var(--font-title);
-  font-size: clamp(20px, 2.25vw, 0px);
+  font-size: clamp(20px, 2.25vw, 40px);
 }
 h3 {
   color: var(--color-1);
   font-family: var(--font-subtitle);
-  font-size: clamp(19px, 3vw, 40px);
+  font-size: clamp(20px, 2.25vw, 40px);
 }
 section {
   margin: 2vw auto;
   max-width: 90vw;
-  padding: 0 1vw;
+  padding: 0 1vw 3vw 1vw;
 }
 
 /* Other */
 
 #title {
   font-family: var(--font-title);
-  font-size: clamp(30px, 2.25vw, 0px);
+  font-size: clamp(30px, 2.25vw, 40px);
   color: var(--color-1);
 }
 #ampersand {
