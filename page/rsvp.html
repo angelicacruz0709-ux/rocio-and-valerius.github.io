@@ -21,7 +21,7 @@
     ></script>
     <script>
       $(function () {
-        $("head").load("/head.html");
+        $("head").load("/element/head.html");
       });
     </script>
   </head>
@@ -29,7 +29,8 @@
   <body>
     <header>
       <div id="logo"></div>
-      <script src="../js/countdown.js"></script>
+      <div id="language"></div>
+      <script src="/js/countdown.js"></script>
       <nav></nav>
     </header>
 
@@ -92,7 +93,7 @@
               e.preventDefault();
               var data = $(this).serialize();
 
-              $("#status").text("Submitting...");
+              $("#status").text("Submitting.");
 
               $.post(
                 "https://script.google.com/macros/s/AKfycbyRxN1Vx-_m1LIPYEzxsZAyWd772cc6xxNoOZg38vZYPe8zvQicJ4XeAQfdAXjO03SmSw/exec",
@@ -136,10 +137,18 @@
     <footer></footer>
 
     <script>
-      fetch("/logo.html")
+      fetch("/element/logo.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("logo").innerHTML = data;
+        });
+    </script>
+
+    <script>
+      fetch("/element/language.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("language").innerHTML = data;
         });
     </script>
 
@@ -149,10 +158,10 @@
 
     <script>
       $(function () {
-        $("nav").load("/nav.html", function () {
+        $("nav").load("/element/nav.html", function () {
           highlightActiveNav();
         });
-        $("footer").load("/footer.html");
+        $("footer").load("/element/footer.html");
       });
     </script>
   </body>

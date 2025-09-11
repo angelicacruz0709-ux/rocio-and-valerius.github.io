@@ -2,28 +2,28 @@
 
 @font-face {
   font-family: other;
-  src: url("../font/PoiretOne-Regular.ttf");
+  src: url("/font/PoiretOne-Regular.ttf");
 }
 @font-face {
   font-family: rsvp;
-  src: url("../font/Caveat-VariableFont_wght.ttf");
+  src: url("/font/Caveat-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: subtitle;
-  src: url("../font/CrimsonText-SemiBold.ttf");
-  /* src: url("../font/BodoniModa_28pt-Medium.ttf"); */
+  src: url("/font/CrimsonText-SemiBold.ttf");
+  /* src: url("/font/BodoniModa_28pt-Medium.ttf"); */
 }
 @font-face {
   font-family: title;
-  src: url("../font/WindSong-Regular.ttf");
+  src: url("/font/WindSong-Regular.ttf");
 }
 /* @font-face {
   font-family: text;
-  src: url("../font/TenorSans-Regular.ttf");
+  src: url("/font/TenorSans-Regular.ttf");
 }*/
 @font-face {
   font-family: text;
-  src: url("../font/CrimsonText-Regular.ttf");
+  src: url("/font/CrimsonText-Regular.ttf");
 }
 
 /* Constant */
@@ -54,7 +54,7 @@
 
 header {
   align-items: center;
-  background: url("../img/flowers.png") no-repeat top center;
+  background: url("/img/flowers.png") no-repeat top center;
   background-color: var(--color-2);
   background-size: 100% auto;
   color: var(--color-1);

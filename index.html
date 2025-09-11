@@ -21,7 +21,7 @@
     ></script>
     <script>
       $(function () {
-        $("head").load("/head.html");
+        $("head").load("/element/head.html");
       });
     </script>
   </head>
@@ -29,27 +29,12 @@
   <body>
     <header>
       <div id="logo"></div>
-      <!-- <script src="../js/countdown.js"></script> -->
+      <div id="language"></div>
+      <script src="/js/countdown.js"></script>
       <nav></nav>
     </header>
 
     <main>
-      <div class="language">
-        <button data-lang="de">
-          <span class="fi fi-de"></span
-          ><a href="index.html" onclick="changeLanguage('de')"></a>
-        </button>
-
-        <a href="index.html" onclick="changeLanguage('de')"
-          ><button data-lang="de">
-            <span class="fi fi-de"></span></button
-        ></a>
-        <a href="index.html" onclick="changeLanguage('mx')"
-          ><button data-lang="mx">
-            <span class="fi fi-mx"></span></button
-        ></a>
-      </div>
-
       <article class="section">
         <section>
           <h2 data-i18n="home_title"></h2>
@@ -68,10 +53,18 @@
     <footer></footer>
 
     <script>
-      fetch("/logo.html")
+      fetch("/element/logo.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("logo").innerHTML = data;
+        });
+    </script>
+
+    <script>
+      fetch("/element/language.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("language").innerHTML = data;
         });
     </script>
 
@@ -81,15 +74,15 @@
 
     <script>
       $(function () {
-        $("nav").load("/nav.html", function () {
+        $("nav").load("/element/nav.html", function () {
           highlightActiveNav();
         });
-        $("footer").load("/footer.html");
+        $("footer").load("/element/footer.html");
       });
     </script>
 
     <script src="/js/language.js"></script>
 
-    <!-- <script src="/js/heart.js"></script> -->
+    <script src="/js/heart.js"></script>
   </body>
 </html>

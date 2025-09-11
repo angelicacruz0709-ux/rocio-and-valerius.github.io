@@ -21,7 +21,7 @@
     ></script>
     <script>
       $(function () {
-        $("head").load("/head.html");
+        $("head").load("/element/head.html");
       });
     </script>
   </head>
@@ -29,7 +29,8 @@
   <body>
     <header>
       <div id="logo"></div>
-      <script src="../js/countdown.js"></script>
+      <div id="language"></div>
+      <script src="/js/countdown.js"></script>
       <nav></nav>
     </header>
 
@@ -52,7 +53,7 @@
             <p>
               Sag uns einfach gerne über unsere Kontaktdaten Bescheid oder
               digital per
-              <a href="/pages/rsvp.html" style="color: #77db90">RSVP</a>.
+              <a href="/page/rsvp.html" style="color: #77db90">RSVP</a>.
             </p>
           </details>
 
@@ -219,7 +220,7 @@
     <footer></footer>
 
     <script>
-      fetch("/logo.html")
+      fetch("/element/logo.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("logo").innerHTML = data;
@@ -227,11 +228,19 @@
     </script>
 
     <script>
+      fetch("/element/language.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("language").innerHTML = data;
+        });
+    </script>
+
+    <script>
       $(function () {
-        $("nav").load("/nav.html", function () {
+        $("nav").load("/element/nav.html", function () {
           highlightActiveNav();
         });
-        $("footer").load("/footer.html");
+        $("footer").load("/element/footer.html");
       });
     </script>
   </body>

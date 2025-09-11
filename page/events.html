@@ -21,17 +21,18 @@
     ></script>
     <script>
       $(function () {
-        $("head").load("/head.html");
+        $("head").load("/element/head.html");
       });
     </script>
   </head>
 
-  <script src="../js/nav.js" defer></script>
+  <script src="/js/nav.js" defer></script>
 
   <body>
     <header>
       <div id="logo"></div>
-      <script src="../js/countdown.js"></script>
+      <div id="language"></div>
+      <script src="/js/countdown.js"></script>
       <nav></nav>
     </header>
 
@@ -82,10 +83,18 @@
     <footer></footer>
 
     <script>
-      fetch("/logo.html")
+      fetch("/element/logo.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("logo").innerHTML = data;
+        });
+    </script>
+
+    <script>
+      fetch("/element/language.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("language").innerHTML = data;
         });
     </script>
 
@@ -95,10 +104,10 @@
 
     <script>
       $(function () {
-        $("nav").load("/nav.html", function () {
+        $("nav").load("/element/nav.html", function () {
           highlightActiveNav();
         });
-        $("footer").load("/footer.html");
+        $("footer").load("/element/footer.html");
       });
     </script>
   </body>
