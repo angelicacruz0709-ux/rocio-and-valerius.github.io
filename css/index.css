@@ -11,16 +11,11 @@
 @font-face {
   font-family: subtitle;
   src: url("/font/CrimsonText-SemiBold.ttf");
-  /* src: url("/font/BodoniModa_28pt-Medium.ttf"); */
 }
 @font-face {
   font-family: title;
   src: url("/font/WindSong-Regular.ttf");
 }
-/* @font-face {
-  font-family: text;
-  src: url("/font/TenorSans-Regular.ttf");
-}*/
 @font-face {
   font-family: text;
   src: url("/font/CrimsonText-Regular.ttf");
