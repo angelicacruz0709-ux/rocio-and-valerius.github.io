@@ -1,28 +1,32 @@
-// Set the target date
-var countDownDate = new Date("Nov 7, 2025 12:00:00").getTime();
-// Update the countdown every 1 second
-var x = setInterval(function () {
-  // Get today's date and time
-  var now = new Date().getTime();
-  // Find the distance between now and the targetdate
-  var distance = countDownDate - now;
-  // Time calculations for days, hours, minutes, and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  // Display the result
-  document.getElementById("countdown").innerHTML =
-    days +
-    "<span style='color:#000000'> Tage &nbsp;</span>" +
-    hours +
-    "<span style='color:#000000'> Std. &nbsp;</span>" +
-    minutes +
-    "<span style='color:#000000'> Min. &nbsp;</span>";
-  // + seconds + "<span style='color:#000000'> Sek. &nbsp;</span>";
-  // If the countdown is finished, write some text
+// Target date
+const targetDate = new Date("2025-11-07T12:00:00").getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
   if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "Wir haben 'ja' gesagt!";
+    document.getElementById("countdown").innerHTML = "Wir haben 'Ja' gesagt!";
+    clearInterval(interval);
+    return;
   }
-}, 1000);
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+  document.getElementById("day").textContent = days;
+  document.getElementById("hour").textContent = hours;
+  document.getElementById("minute").textContent = minutes;
+
+  document.getElementById("label-day").textContent = translations[lang].days;
+  document.getElementById("label-hour").textContent = translations[lang].hours;
+  document.getElementById("label-minute").textContent =
+    translations[lang].minutes;
+}
+
+// Update interval
+const interval = setInterval(updateCountdown, 500);
+updateCountdown();

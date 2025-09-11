@@ -26,6 +26,7 @@
 :root {
   --color-1: #465e45;
   --color-2: #fcfcfb;
+  --color-black: #000000;
   --color-rsvp: #465e45;
   --color-shadow: #465e4580;
   --color-white: #ffffff;
@@ -206,6 +207,9 @@ section {
   font-size: clamp(16.67px, 1.88vw, 25px);
   color: var(--color-1);
   margin: 0.5vw 0 0 0;
+}
+#countdown .label {
+  color: var(--color-black);
 }
 
 /* Mobile */

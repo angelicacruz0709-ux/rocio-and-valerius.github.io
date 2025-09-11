@@ -34,7 +34,7 @@ async function changeLanguage(lang) {
   updateContent(langData);
 
   //
-  toggleArabicStylesheet(lang); // Toggle Arabic stylesheet
+  // toggleArabicStylesheet(lang);
 }
 
 // Function to toggle Arabic stylesheet based on language selection
