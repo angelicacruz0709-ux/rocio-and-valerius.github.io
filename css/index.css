@@ -18,12 +18,13 @@ body {
 }
 
 footer {
-  background-color: #292c2f;
+  background-color: var(--color-1);
   border-top: 5px solid #000000;
   bottom: 0;
   box-sizing: border-box;
-  height: 100px;
-  padding: 20px 30px 20px 30px;
+  font-family: var(--font-footer);
+  /* font-size: clamp(10px, 1.13vw, 15px);  height: 100px; */
+  padding: 1vw;
   position: absolute;
   text-align: left;
   width: 100%;

@@ -237,13 +237,13 @@ img.img_heart {
 
 footer {
   background-color: var(--color-1);
+  bottom: 0;
   color: var(--color-2);
   font-family: var(--font-footer);
   font-size: clamp(10px, 1.13vw, 15px);
   margin: 40px 0 0 0;
   padding: 1vw;
+  position: absolute;
   /* position: static; */
   width: 100%;
-  bottom: 0;
-  position: absolute;
 }
