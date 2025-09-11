@@ -43,6 +43,12 @@
             Gewölbehimmels das „Ja-Wort“ geben werden. Anschließend möchten wir
             unsere Liebe gleich zweimal mit Euch feiern.
           </p>
+          <img
+            src="/img/branch.png"
+            alt="branch"
+            width="70px"
+            class="img_branch"
+          />
           <!-- <img src="/img/icon.svg" alt="heart" width="50px" class="img_heart" /> -->
           <p>
             Ob in Deutschland, in Mexiko - oder vielleicht sogar in beiden
@@ -53,60 +59,6 @@
         </section>
       </article>
     </main>
-
-    <style>
-      .heart {
-        position: absolute;
-        font-size: 30px;
-        color: red;
-        opacity: 0;
-        animation: flash 1.5s ease-in-out infinite, fadeOut 3s linear forwards;
-      }
-
-      @keyframes flash {
-        0%,
-        100% {
-          transform: scale(1);
-          opacity: 0.3;
-        }
-        50% {
-          transform: scale(1.5);
-          opacity: 1;
-        }
-      }
-
-      @keyframes fadeOut {
-        0% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-    </style>
-
-    <script>
-      function createHeart() {
-        const heart = document.createElement("div");
-        heart.classList.add("heart");
-        heart.innerHTML = "❤️";
-        document.body.appendChild(heart);
-
-        // Random position
-        const x = Math.random() * window.innerWidth;
-        const y = Math.random() * window.innerHeight;
-        heart.style.left = `${x}px`;
-        heart.style.top = `${y}px`;
-
-        // Remove heart after animation
-        setTimeout(() => {
-          heart.remove();
-        }, 3000);
-      }
-
-      // Generate hearts every 500ms
-      setInterval(createHeart, 1000);
-    </script>
 
     <footer></footer>
 
@@ -130,5 +82,7 @@
         $("footer").load("/footer.html");
       });
     </script>
+
+    <script src="/js/hearts.js"></script>
   </body>
 </html>

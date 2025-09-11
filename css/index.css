@@ -180,6 +180,12 @@ button:active {
 
 /* Image */
 
+img.img_branch {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 30vw;
+}
 img.img_cake {
   display: block;
   height: auto;
@@ -227,4 +233,30 @@ footer {
   position: absolute;
   /* text-align: left; */
   width: 100%;
+}
+
+/* Flashing hearts */
+
+.heart {
+  position: absolute;
+  animation: flash 3s ease-in-out infinite, fadeOut 3s linear forwards;
+}
+@keyframes flash {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
