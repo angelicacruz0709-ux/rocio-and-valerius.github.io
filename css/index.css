@@ -1,19 +1,18 @@
 html {
-  margin: 0 0 0 0;
+  margin: 0;
   min-height: 100%;
-  padding: 0 0 0 0;
+  padding: 0;
   position: relative;
 }
 
 body {
-  background-color: #ffffff;
-  color: #000000;
-  font-family: "Verdana";
-  font-size: 13px;
-  margin: 0 0 0 0;
+  background-color: var(--color-2);
+  font-family: var(--font-text);
+  /* font-size: 13px; */
+  margin: 0;
   margin-bottom: 100px;
-  padding: 0 0 0 0;
-  text-align: justify;
+  padding: 0;
+  text-align: center;
   text-justify: inter-word;
 }
 
@@ -21,12 +20,14 @@ footer {
   background-color: var(--color-1);
   border-top: 5px solid #000000;
   bottom: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
+  color: var(--color-2);
   font-family: var(--font-footer);
-  /* font-size: clamp(10px, 1.13vw, 15px);  height: 100px; */
+  font-size: clamp(10px, 1.13vw, 15px);
+  /* height: 100px; */
   padding: 1vw;
   position: absolute;
-  text-align: left;
+  /* text-align: left; */
   width: 100%;
 }
 
@@ -100,7 +101,7 @@ header {
 
 /* Logo */
 
-#logo {
+/* #logo {
   color: inherit;
   display: block;
   padding-top: 6vw;
@@ -108,7 +109,7 @@ header {
 }
 #logo:hover {
   cursor: pointer;
-}
+} */
 
 /* Navigation */
 
@@ -175,6 +176,7 @@ section {
   font-family: var(--font-title);
   font-size: clamp(30px, 2.25vw, 40px);
   color: var(--color-1);
+  padding-top: 12vw;
 }
 #ampersand {
   font-family: var(--font-title);
