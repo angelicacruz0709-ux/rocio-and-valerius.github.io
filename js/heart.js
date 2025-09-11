@@ -17,4 +17,10 @@ function createHeart() {
 }
 
 // Adjust frequency
-setInterval(createHeart, 1500);
+// setInterval(createHeart, 1500);
+
+// Run animation for 20 seconds only
+const heartInterval = setInterval(createHeart, 1500);
+setTimeout(() => {
+  clearInterval(heartInterval);
+}, 10000);

@@ -29,33 +29,38 @@
   <body>
     <header>
       <div id="logo"></div>
-      <script src="../js/countdown.js"></script>
+      <!-- <script src="../js/countdown.js"></script> -->
       <nav></nav>
     </header>
 
     <main>
+      <div class="language">
+        <button data-lang="de">
+          <span class="fi fi-de"></span
+          ><a href="index.html" onclick="changeLanguage('de')"></a>
+        </button>
+
+        <a href="index.html" onclick="changeLanguage('de')"
+          ><button data-lang="de">
+            <span class="fi fi-de"></span></button
+        ></a>
+        <a href="index.html" onclick="changeLanguage('mx')"
+          ><button data-lang="mx">
+            <span class="fi fi-mx"></span></button
+        ></a>
+      </div>
+
       <article class="section">
         <section>
-          <h2>Wir sagen nur einmal Ja, aber feiern zweimal!</h2>
-          <p>
-            Wir heiraten standesamtlich am 7. November 2025 in der Alten
-            Neuendorfer Kirche in Potsdam, wo wir uns unter den 997 Sternen des
-            Gewölbehimmels das „Ja-Wort“ geben werden. Anschließend möchten wir
-            unsere Liebe gleich zweimal mit Euch feiern.
-          </p>
+          <h2 data-i18n="home_title"></h2>
+          <p data-i18n="home_text_1"></p>
           <img
             src="/img/branch.png"
             alt="branch"
             width="70px"
             class="img_branch"
           />
-          <!-- <img src="/img/icon.svg" alt="heart" width="50px" class="img_heart" /> -->
-          <p>
-            Ob in Deutschland, in Mexiko - oder vielleicht sogar in beiden
-            Ländern - wir können es kaum erwarten, diesen besonderen Moment mit
-            Euch zu teilen. Deshalb haben wir diese Website erstellt: Hier
-            findet Ihr alle wichtigen Informationen zu unserer Hochzeit.
-          </p>
+          <p data-i18n="home_text_2"></p>
         </section>
       </article>
     </main>
@@ -83,6 +88,8 @@
       });
     </script>
 
-    <script src="/js/hearts.js"></script>
+    <script src="/js/language.js"></script>
+
+    <!-- <script src="/js/heart.js"></script> -->
   </body>
 </html>
