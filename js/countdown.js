@@ -28,5 +28,5 @@ function updateCountdown() {
 }
 
 // Update interval
-const interval = setInterval(updateCountdown, 500);
+const interval = setInterval(updateCountdown, 100);
 updateCountdown();

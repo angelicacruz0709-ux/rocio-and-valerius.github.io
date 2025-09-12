@@ -80,6 +80,7 @@ header {
   border-radius: 50%;
   cursor: pointer;
   display: flex;
+  font-family: var(--font-text);
   height: clamp(20px, 4vw, 40px);
   justify-content: center;
   width: clamp(20px, 4vw, 40px);

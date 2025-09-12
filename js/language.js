@@ -26,12 +26,22 @@ function updateContent(langData) {
   });
 }
 
+// function applyTranslations(langData) {
+//   document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+//     const key = el.getAttribute("data-i18n-placeholder");
+//     if (dict[key]) {
+//       el.setAttribute("placeholder", dict[key]);
+//     }
+//   });
+// }
+
 // Function to change language
 async function changeLanguage(lang) {
   await setLanguagePreference(lang);
 
   const langData = await fetchLanguageData(lang);
   updateContent(langData);
+  // applyTranslations(langData);
 
   //
   // toggleArabicStylesheet(lang);
@@ -58,5 +68,6 @@ window.addEventListener("DOMContentLoaded", async () => {
   const userPreferredLanguage = localStorage.getItem("language") || "de";
   const langData = await fetchLanguageData(userPreferredLanguage);
   updateContent(langData);
-  toggleArabicStylesheet(userPreferredLanguage);
+  // applyTranslations(langData);
+  // toggleArabicStylesheet(userPreferredLanguage);
 });
